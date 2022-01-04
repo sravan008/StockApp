@@ -1,40 +1,40 @@
-import React, { Component } from 'react'
-import { connect } from 'react-redux'
-import { getGainers } from '../../store/actions'
+// import React, { Component } from 'react'
+// import { connect } from 'react-redux'
+// import { getGainers } from '../../store/actions'
 
-import List from '../List'
+// import List from '../List'
 
-class Gainers extends Component {
-  onRefresh = () => this.props.getGainers()
+// class Gainers extends Component {
+//   onRefresh = () => this.props.getGainers()
 
-  componentDidMount() {
-    this.props.getGainers()
-  }
+//   componentDidMount() {
+//     this.props.getGainers()
+//   }
 
-  render() {
-    const { data, latestUpdate, loading } = this.props.gainers
+//   render() {
+//     const { data, latestUpdate, loading } = this.props.gainers
 
-    return (
-      <List
-        headerTitle="Gainers"
-        latestUpdate={latestUpdate}
-        loading={loading}
-        list={data}
-        onRefresh={this.onRefresh}
-      />
-    )
-  }
-}
+//     return (
+//       <List
+//         headerTitle="Gainers"
+//         latestUpdate={latestUpdate}
+//         loading={loading}
+//         list={data}
+//         onRefresh={this.onRefresh}
+//       />
+//     )
+//   }
+// }
 
-const mapStateToProps = state => ({
-  gainers: state.gainers
-})
+// const mapStateToProps = state => ({
+//   gainers: state.gainers
+// })
 
-const mapDispatchToProps = {
-  getGainers
-}
+// const mapDispatchToProps = {
+//   getGainers
+// }
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Gainers)
+// export default connect(
+//   mapStateToProps,
+//   mapDispatchToProps
+// )(Gainers)

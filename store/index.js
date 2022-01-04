@@ -5,13 +5,15 @@ import { createStore, applyMiddleware } from 'redux'
 import { persistStore, persistReducer } from 'redux-persist'
 
 import reducers from './reducers'
-import { API_KEY } from 'react-native-dotenv'
+//import { API_KEY } from 'react-native-dotenv'
 
 const persistConfig = {
   key: 'root',
   storage,
   whitelist: ['favorites']
 }
+
+const API_KEY = "pk_69520f6c74884db5a60fba0b3d6492e4";
 
 const client = axios.create({
   baseURL: 'https://cloud.iexapis.com/v1',

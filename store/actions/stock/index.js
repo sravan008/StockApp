@@ -6,7 +6,7 @@ export const getStock = (symbol, range) => {
     payload: {
       range: range,
       request: {
-        url: `/stock/${symbol}/batch?types=quote,news,chart&range=${range.query}&chartInterval=${range.interval}`
+        url: `/stock/AVLR/batch?types=quote,news,chart&range=${range.query}&chartInterval=${range.interval}`
       }
     }
   }
@@ -18,7 +18,7 @@ export const getStockChart = (symbol, range) => {
     payload: {
       range: range,
       request: {
-        url: `/stock/${symbol}/batch?types=quote,news,chart&range=${range.query}&chartInterval=${range.interval}`
+        url: `/stock/AVLR/batch?types=quote,news,chart&range=${range.query}&chartInterval=${range.interval}`
       }
     }
   }

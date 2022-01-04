@@ -32,7 +32,7 @@ class Save extends Component {
 
     return (
       <View>
-        {!this.props.autoSuggest && (
+        {/* {!this.props.autoSuggest && (
           <Fab
             style={this.isFavorite(quote.symbol) ? styles.favorite : styles.notFavorite}
             position="bottomRight"
@@ -40,7 +40,7 @@ class Save extends Component {
           >
             <Icon name="md-heart" style={styles.icon} />
           </Fab>
-        )}
+        )} */}
       </View>
     )
   }

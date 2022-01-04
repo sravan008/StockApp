@@ -32,7 +32,7 @@ class Search extends Component {
 
   render = () => (
     <View style={styles.container}>
-      <Item searchBar style={styles.item}>
+      {/* <Item searchBar style={styles.item}>
         <Icon name="md-search" style={styles.icon} />
         <Input
           autoCapitalize="characters"
@@ -54,7 +54,7 @@ class Search extends Component {
             <Icon name="md-close" style={styles.icon} />
           </TouchableOpacity>
         ) : null}
-      </Item>
+      </Item> */}
     </View>
   )
 }

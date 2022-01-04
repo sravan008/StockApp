@@ -13,6 +13,7 @@ import { Colors } from './constants'
 import store from './store'
 
 import Tabs from './components/Tabs'
+import Stock from './components/Stock';
 
 export default class App extends Component {
   state = { loading: true }
@@ -33,12 +34,9 @@ export default class App extends Component {
       <Provider store={store.store}>
         <PersistGate loading={null} persistor={store.persistor}>
           <StyleProvider style={getTheme(platform)}>
-            <View style={styles.container}>
-              <Root>
-                <StatusBar barStyle="light-content" />
-                <Tabs />
-              </Root>
-            </View>
+          <View style={styles.container}>
+          <Stock />
+          </View>
           </StyleProvider>
         </PersistGate>
       </Provider>

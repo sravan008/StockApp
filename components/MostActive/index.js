@@ -1,40 +1,40 @@
-import React, { Component } from 'react'
-import { connect } from 'react-redux'
-import { getMostActive } from '../../store/actions'
+// import React, { Component } from 'react'
+// import { connect } from 'react-redux'
+// import { getMostActive } from '../../store/actions'
 
-import List from '../List'
+// import List from '../List'
 
-class MostActive extends Component {
-  onRefresh = () => this.props.getMostActive()
+// class MostActive extends Component {
+//   onRefresh = () => this.props.getMostActive()
 
-  componentDidMount() {
-    this.props.getMostActive()
-  }
+//   componentDidMount() {
+//     this.props.getMostActive()
+//   }
 
-  render() {
-    const { data, latestUpdate, loading } = this.props.mostActive
+//   render() {
+//     const { data, latestUpdate, loading } = this.props.mostActive
 
-    return (
-      <List
-        headerTitle="Most Active"
-        latestUpdate={latestUpdate}
-        loading={loading}
-        list={data}
-        onRefresh={this.onRefresh}
-      />
-    )
-  }
-}
+//     return (
+//       <List
+//         headerTitle="Most Active"
+//         latestUpdate={latestUpdate}
+//         loading={loading}
+//         list={data}
+//         onRefresh={this.onRefresh}
+//       />
+//     )
+//   }
+// }
 
-const mapStateToProps = state => ({
-  mostActive: state.mostActive
-})
+// const mapStateToProps = state => ({
+//   mostActive: state.mostActive
+// })
 
-const mapDispatchToProps = {
-  getMostActive
-}
+// const mapDispatchToProps = {
+//   getMostActive
+// }
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(MostActive)
+// export default connect(
+//   mapStateToProps,
+//   mapDispatchToProps
+// )(MostActive)

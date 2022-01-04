@@ -3,7 +3,7 @@ import { RefreshControl, StyleSheet } from 'react-native'
 import { Content, Text, View } from 'native-base'
 import { connect } from 'react-redux'
 
-import { Colors } from '../../constants'
+import { Colors, Ranges } from '../../constants'
 import { getStock } from '../../store/actions'
 
 import Search from '../Search'
@@ -16,10 +16,16 @@ import Save from './Save'
 
 class Stock extends Component {
   onRefresh = () => {
+    const stockSYM = "AVLR"; 
     if (this.props.stock.data.quote) {
       this.props.getStock(this.props.stock.data.quote.symbol, this.props.stock.range)
     }
   }
+
+  componentDidMount(){
+    const stockSYM = "AVLR"; 
+    this.props.getStock(stockSYM, Ranges.ONE_MONTH)
+}
 
   render() {
     const { error, loading } = this.props.stock
@@ -28,7 +34,7 @@ class Stock extends Component {
     return (
       <View style={styles.container}>
         <Search />
-        <AutoSuggest />
+      
         {isError ? (
           <Text style={styles.noResults}>{error}</Text>
         ) : (
