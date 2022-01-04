@@ -10,7 +10,7 @@ First, head over to the [Expo installation guide](https://docs.expo.io/versions/
 
 ``` bash
 # clone repo
-git clone git@github.com:krestaino/stock-check.git
+git clone https://github.com/sravan008/StockApp.git
 
 # install dependencies
 yarn install
